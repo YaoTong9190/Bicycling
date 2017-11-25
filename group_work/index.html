@@ -8,24 +8,347 @@
 <title>Bicycle - Make Life Simple</title>
 <link href="css/tenpay_min.css?v=20160825" rel="stylesheet" type="text/css">
 
+	   <script type="text/javascript" src="js/echarts-all-3.js"></script>
+	   <script type="text/javascript" src="js/ecStat.min.js"></script>
+	   <script type="text/javascript" src="js/dataTool.min.js"></script>
+	   <script type="text/javascript" src="js/china.js"></script>
+	   <script type="text/javascript" src="js/world.js"></script>
+	   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+	   <script type="text/javascript" src="js/bmap.min.js"></script>
+
+	   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+$( "#clickme" ).click(function() {
+  $( "#book" ).toggle( "slow", function() {
+	// Animation complete.
+  });
+});
+	$('li').click(function(){
+		$(this).toggleClass('gray');
+	})
+});
+
+</script>
 </head>
 <body class="main">
 <!-- content [[ -->
 <div class="content" role="main">
-	<div class="pg pg-1">
+	<div class="pg pg-1 hide">
+	</div>
+	<div class="pg pg-2 hid">
+        <div id="container" style="height:500px;width:900px;left:254px;top:24px;"></div>
+		<ol class="flow flow-2">
+			<li class="li-1 rect"><img src="img/2_1.png" width="284" height="auto" alt=""></li>
+			<li class="li-2"><img src="img/2_2.png" width="317" height="auto" alt=""></li>
+			<li class="li-3"><img src="img/2_3.png" width="223" height="auto" alt=""></li>
+			<li class="li-4 rect"><img src="img/2_4.png" width="210" height="auto" alt=""></li>
+			<li class="li-5"><img src="img/2_5.png" width="623" height="auto" alt=""></li>
+			<li class="li-6 rect"><img src="img/2_6.png" width="260" height="auto" alt=""></li>
+		</ol>
 			
 	</div>
-	<div class="pg pg-2">
-			
-	</div>
-	<div class="pg pg-3">
+	<div class="pg pg-3 hie">
+        <div id="container-1" style="height:500px;width:900px;left:254px;top:24px;"></div>
+		<ol class="flow flow-3">
+			<li class="li-1"><img src="img/3_1.png" width="283" height="auto" alt=""></li>
+			<li class="li-2 rect"><img src="img/3_2.png" width="283" height="auto" alt=""></li>
+			<li class="li-3"><img src="img/3_3.png" width="795" height="auto" alt=""></li>
+			<li class="li-4"><img src="img/3_4.png" width="270" height="auto" alt=""></li>
+		</ol>
 			
 	</div>
 	<div class="pg pg-4">
-			
+        <div id="container-2" style="height:500px;width:900px;left:254px;top:24px;"></div>
+        <ol class="flow flow-4">
+            <li class="li-1"><img src="img/4_1.png" width="308" height="auto" alt=""></li>
+            <li class="li-2"><img src="img/4_2.png" width="520" height="auto" alt=""></li>
+            <li class="li-3"><img src="img/4_3.png" width="553" height="auto" alt=""></li>
+        </ol>
+            
 	</div>
 </div>
 <!-- content ]] -->
 
+<script type="text/javascript">
+
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+	title: {
+		text: '',
+		subtext: ''
+	},
+	tooltip: {
+		trigger: 'axis'
+	},
+	legend: {
+		data:['Straiton Path','Melville Drive Main']
+	},
+	toolbox: {
+		show: true,
+		feature: {
+			dataZoom: {
+				yAxisIndex: 'none'
+			},
+			dataView: {readOnly: false},
+			magicType: {type: ['line', 'bar']},
+			restore: {},
+			saveAsImage: {}
+		}
+	},
+	xAxis:  {
+		type: 'category',
+		boundaryGap: false,
+		data: [' ','6:00','9:00','12:00','15:00','18:00','21:00','24:00']
+	},
+	yAxis: {
+		type: 'value',
+		axisLabel: {
+			formatter: '{value}'
+		}
+	},
+	series: [
+		{
+			name:'Straiton Path',
+			type:'line',
+			data:[0, 1, 15, 3, 5, 2, 17,3,0],
+			markPoint: {
+				data: [
+					{type: 'max', name: 'Max'}/*,
+					{type: 'min', name: 'Min'}*/
+				]
+			}/*,
+			markLine: {
+				data: [
+					{type: 'average', name: 'Average'}
+				]
+			}*/
+		},
+		{
+			name:'Melville Drive Main',
+			type:'line',
+			data:[0,2, 20, 5, 4, 5, 27,4,1],
+			markPoint: {
+				data: [
+					{type: 'max', name: 'Max'}
+				]
+			}/*,
+			markLine: {
+				data: [
+					{type: 'average', name: 'Average'},
+					[{
+						symbol: 'none',
+						x: '90%',
+						yAxis: 'max'
+					}, {
+						symbol: 'circle',
+						label: {
+							normal: {
+								position: 'start',
+								formatter: 'Max'
+							}
+						},
+						type: 'max',
+						name: 'Max'
+					}]
+				]
+			}*/
+		}
+	]
+};
+;
+
+
+var dom1 = document.getElementById("container-1");
+var myChart1 = echarts.init(dom1);
+var app1 = {};
+option1 = null;
+option1 = {
+    title: {
+        text: '',
+        subtext: ''
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Straiton Path','Melville Drive Main']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: [' ','6:00','9:00','12:00','15:00','18:00','21:00','24:00']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}'
+        }
+    },
+    series: [
+        {
+            name:'Straiton Path',
+            type:'line',
+            data:[0, 1, 15, 3, 5, 2, 17,3,0],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'}/*,
+                    {type: 'min', name: 'Min'}*/
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'}
+                ]
+            }*/
+        },
+        {
+            name:'Melville Drive Main',
+            type:'line',
+            data:[0,2, 20, 5, 4, 5, 27,4,1],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'}
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'},
+                    [{
+                        symbol: 'none',
+                        x: '90%',
+                        yAxis: 'max'
+                    }, {
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                position: 'start',
+                                formatter: 'Max'
+                            }
+                        },
+                        type: 'max',
+                        name: 'Max'
+                    }]
+                ]
+            }*/
+        }
+    ]
+};
+;
+var dom2 = document.getElementById("container-2");
+var myChart2 = echarts.init(dom2);
+var app2 = {};
+option2 = null;
+option2 = {
+    title: {
+        text: '',
+        subtext: ''
+    },
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data:['Straiton Path','Melville Drive Main']
+    },
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
+        }
+    },
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: [' ','6:00','9:00','12:00','15:00','18:00','21:00','24:00']
+    },
+    yAxis: {
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}'
+        }
+    },
+    series: [
+        {
+            name:'Straiton Path',
+            type:'line',
+            data:[0, 1, 15, 3, 5, 2, 17,3,0],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'}/*,
+                    {type: 'min', name: 'Min'}*/
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'}
+                ]
+            }*/
+        },
+        {
+            name:'Melville Drive Main',
+            type:'line',
+            data:[0,2, 20, 5, 4, 5, 27,4,1],
+            markPoint: {
+                data: [
+                    {type: 'max', name: 'Max'}
+                ]
+            }/*,
+            markLine: {
+                data: [
+                    {type: 'average', name: 'Average'},
+                    [{
+                        symbol: 'none',
+                        x: '90%',
+                        yAxis: 'max'
+                    }, {
+                        symbol: 'circle',
+                        label: {
+                            normal: {
+                                position: 'start',
+                                formatter: 'Max'
+                            }
+                        },
+                        type: 'max',
+                        name: 'Max'
+                    }]
+                ]
+            }*/
+        }
+    ]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+if (option1 && typeof option1 === "object") {
+    myChart1.setOption(option1, true);
+}
+if (option2 && typeof option2 === "object") {
+    myChart2.setOption(option2, true);
+}
+</script>
+<!--
+-->
 </body>
 </html>
