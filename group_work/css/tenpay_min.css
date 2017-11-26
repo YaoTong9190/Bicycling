@@ -229,561 +229,129 @@ html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
 .trigger .trigger-visible{position:static;}
 
 
+.arrow:hover {
+    -webkit-transition-delay: 0;
+    transition-delay: 0;
+    opacity: 1;
+}
+.arrow{
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    line-height: 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-bottom: 15px solid rgb(45, 188, 87);
+    border-right: 15px solid rgb(45, 188, 87);
+    border-left: 15px solid rgb(255,255, 255);
+    border-top: 15px solid rgb(255,255, 255);
+    position: absolute;
+    top: 70px;
+    left: 136px;
+    -webkit-animation: opener .5s ease-in-out alternate infinite;
+    animation: opener .5s ease-in-out alternate infinite;
+    cursor: pointer;
+    opacity: 0.5;
+    -webkit-transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+    transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+}
 
+.arrow.white{
+    cursor: pointer;
+    width: 0px;
+    height: 0px;
+    line-height: 0px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-bottom: 15px solid rgba(255,255, 255,1);
+    border-right: 15px solid rgba(255,255, 255,1);
+    border-left: 15px solid rgba(76, 216, 117,0);
+    border-top: 15px solid rgba(76, 216, 117,0);
+    position: absolute;
+    top: 70px;
+    left: 136px;
+    -webkit-animation: opener .5s ease-in-out alternate infinite;
+    animation: opener .5s ease-in-out alternate infinite;
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+    transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
+}
+@-webkit-keyframes opener {
+    100% {
+        top: 65px
+    }
+}
+@keyframes opener {
+    100% {
+        top: 65px
+    }
+}
 
+.pg-2 .arrow.white{left:50%;}
+.pg-4 .arrow.white{left:50%;margin-top:600px;}
 
 /* 
-	sally
+	sally#dbf7e3;
 */
-.main{background-color:#dbf7e3;}
-.content{width:1410px;margin:0 auto;}
-.pg .flow{position:relative;top:-417px;height:300px;}
+.main{background-color:#ffffff;}
+.content{margin:0 auto;}
+.con{position:relative;z-index:100;}
+.pg .flow{position:relative;top:-417px;height:230px;}
 .pg .flow > li{position:absolute;display:inline-block;}
 .pg .flow .gray:before{display:block;content:"";position:absolute;width:100%;height:100%;}
 .pg .flow .rect:before{background-color:rgba(238,236,237,0.7);background-image:none;border-radius:6px;}
 
 
 
-.pg-1{background-image:url(../img/page_1.jpg);height:1600px;background-repeat:no-repeat;}
 
-
-
-.pg-2 .flow > .li-2.gray:before{background-image:url(../img/2_2_h.png);background-size:100% auto;}
-.pg-2 .flow > .li-3.gray:before{background-image:url(../img/2_3_h.png);background-size:100% auto;}
-.pg-2 .flow > .li-5.gray:before{background-image:url(../img/2_5_h.png);background-size:100% auto;}
-
-.pg-2 .flow > .li-1{top:0px;left:0px;}
-.pg-2 .flow > .li-2{top:355px;left:0px;}
-.pg-2 .flow > .li-3{top:448px;left:310px;}
-.pg-2 .flow > .li-4{top:455px;left:558px;}
-.pg-2 .flow > .li-5{top:445px;left:791px;}
-.pg-2 .flow > .li-6{top:-70px;left:1154px;}
-
-
-.pg-3 .flow-3{top:-370px;}
-.pg-3 .flow > .li-1.gray:before{background-image:url(../img/3_1_h.png);background-size:100% auto;}
-.pg-3 .flow > .li-3.gray:before{background-image:url(../img/3_3_h.png);background-size:100% auto;}
-.pg-3 .flow > .li-4.gray:before{background-image:url(../img/3_4_h.png);background-size:100% auto;}
-
-.pg-3 .flow > .li-1{top:0px;left:0px;}
-.pg-3 .flow > .li-2{top:330px;left:0px;}
-.pg-3 .flow > .li-3{top:384px;left:310px;}
-.pg-3 .flow > .li-4{top:140px;left:1134px;}
-
-
-.pg-4 .flow > .li-1.gray:before{background-image:url(../img/4_1_h.png);background-size:100% auto;}
-.pg-4 .flow > .li-2.gray:before{background-image:url(../img/4_2_h.png);background-size:100% auto;}
-.pg-4 .flow > .li-3.gray:before{background-image:url(../img/4_3_h.png);background-size:100% auto;}
-
-.pg-4 .flow-4{top:-340px;}
-.pg-4 .flow > .li-1{top:0px;left:0px;}
-.pg-4 .flow > .li-2{top:358px;left:310px;}
-.pg-4 .flow > .li-3{top:110px;left:854px;}
-
-
-
-/*
-.pg-1{background-image:url(../img/page_1.jpg);height:1600px;background-repeat:no-repeat;}
-.pg-2{background-image:url(../img/page_2.jpg);height:751px;background-repeat:no-repeat;}
-.pg-3{background-image:url(../img/page_3.jpg);height:735px;background-repeat:no-repeat;}
-.pg-4{background-image:url(../img/page_4.jpg);height:740px;background-repeat:no-repeat;}
-.pg-5{height:1000px;background-repeat:no-repeat;background-color:#ffffff;position:relative;}
-
-.pg-5 ol{position:absolute;right:200px;}
-.pg-5 ol li{line-height:20px;color:#666;font-size:20px;}
-.pg-5 ol span{margin-right:20px;display:inline-block;width:60px;height:20px;border:1px solid #fff;}
-.pg-5 ol .li-1{background-color:#ffe88c;}
-.pg-5 ol .li-2{background-color:#ff8cd0;}
-.pg-5 ol .li-3{background-color:#8ccdff;}
-.pg-5 ol .li-4{border:1px solid #666;}
-.pg-5 .cir{position:absolute;opacity:0.5;}
-.pg-5 .cir-1{width:296px;height:296px;border-radius:50%;border:1px solid #666;}
-.pg-5 .cir-2{width:265px;height:265px;border-radius:50%;background-color:#ffe88c;top:4px;left:4px;}
-.pg-5 .cir-3{width:162px;height:162px;border-radius:50%;background-color:#ff8cd0;left:112px;top:20px;}
-.pg-5 .cir-4{width:202px;height:202px;border-radius:50%;background-color:#8ccdff;left:382px;top:33px;}
-.pg-5 .cir p{color:#333;font-size:20px;}
-.pg-5 .cir-1 p{margin:132px 0 0 49px;}
-.pg-5 .cir-2 p{margin:732px 0 0 459px;}
-.pg-5 .cir-3 p{margin:362px 0 0 149px;}
-.pg-5 .cir-4 p{margin:142px 0 0 339px;}
-.pg-5 .cir-5 p{margin:132px 0 0 132px;}
-.pg-5 .cir-6 p{margin:252px 0 0 519px;}
-
-
-
-
-.pg-6{height:1000px;background-repeat:no-repeat;background-color:#ffffff;position:relative;}
-
-.pg-6 ol li{line-height:20px;color:#666;font-size:20px;}
-.pg-6 ol span{margin-right:20px;display:inline-block;width:60px;height:20px;border:1px solid #fff;}
-.pg-6 ol .li-1{background-color:#ffe88c;}
-.pg-6 ol .li-2{background-color:#ff8cd0;}
-.pg-6 ol .li-3{background-color:#8ccdff;}
-.pg-6 ol .li-4{border:1px solid #666;}
-.pg-6 .cir{position:absolute;opacity:0.5;}
-.pg-6 .cir-1{width:962px;height:962px;border-radius:50%;border:1px solid #666;}
-.pg-6 .cir-2{width:954px;height:954px;border-radius:50%;background-color:#ffe88c;top:4px;left:4px;}
-.pg-6 .cir-3{width:595px;height:595px;border-radius:50%;background-color:#ff8cd0;left:112px;top:20px;}
-.pg-6 .cir-4{width:435px;height:435px;border-radius:50%;background-color:#8ccdff;left:382px;top:33px;}
-.pg-6 .cir p{color:#333;font-size:20px;}
-.pg-6 .cir-1 p{margin:132px 0 0 49px;}
-.pg-6 .cir-2 p{margin:732px 0 0 459px;}
-.pg-6 .cir-3 p{margin:362px 0 0 149px;}
-.pg-6 .cir-4 p{margin:142px 0 0 339px;}
-.pg-6 .cir-5 p{margin:132px 0 0 132px;}
-.pg-6 .cir-6 p{margin:252px 0 0 519px;}
-
-	<div class="pg pg-5">
-		<div class="cir cir-1"><p>962</p></div>
-		<div class="cir cir-2"><p>249</p></div>
-		<div class="cir cir-3"><p>271</p></div>
-		<div class="cir cir-4"><p>111</p></div>
-		<div class="cir cir-5"><p>7</p></div>
-		<div class="cir cir-6"><p>323</p></div>
-		<ol>
-			<li><span class="li-1"></span>no chat</li>
-			<li><span class="li-2"></span>no group</li>
-			<li><span class="li-3"></span>no comment</li>
-			<li><span class="li-4"></span>all contacts</li>
-		</ol>
-	</div>
-	<div class="pg pg-6">
-		<div class="cir cir-1"><p>876</p></div>
-		<div class="cir cir-2"><p>256</p></div>
-		<div class="cir cir-3"><p>35</p></div>
-		<div class="cir cir-4"><p>36</p></div>
-		<div class="cir cir-5"><p>89</p></div>
-		<div class="cir cir-6"><p>85</p></div>
-		<div class="cir cir-6"><p>234</p></div>
-		<div class="cir cir-6"><p>13</p></div>
-		<div class="cir cir-6"><p>89</p></div>
-		<ol>
-			<li><span class="li-1"></span>no chat</li>
-			<li><span class="li-2"></span>no group</li>
-			<li><span class="li-3"></span>no comment</li>
-			<li><span class="li-4"></span>all contacts</li>
-		</ol>
-	</div>
-
-*/
-
-/* ============================================================
-	 动画
-	 ============================================================ */
-/*
-	动画：加载中点点点循环出现
-	结构：<span class="loadfield">加载中<span class="loadfield-animation">...</span></span>
-*/
-.loadfield{display:inline-block;width:54px;overflow:hidden;font:400 12px/1.5 Tahoma;color:#999999;}
-@media screen and (-webkit-min-device-pixel-ratio:0){
-.loadfield-animation{display:inline-block;overflow:hidden;width:14px;-webkit-animation-name:loadfield;-webkit-animation-duration:1.5s;-webkit-animation-iteration-count:infinite;-webkit-animation-timing-function:linear;}
+.pg-1 {
+  background: -webkit-linear-gradient(top, rgb(55, 148, 192) 0%, rgb(76, 216, 117) 100%);
+  background: -moz-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -o-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
+  background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
 }
-@-webkit-keyframes loadfield{
-	0%	{width:0;}
-	80%{width:14px;}
+.pg-2,.pg-3,.pg-4{background-color:#4cd875;}
+.pg-2 img{margin:0 auto;}
+
+
+.pg-5 {
 }
+.pg-5 .flow > .li-2.gray:before{background-image:url(../img/2_2_h.png);background-size:100% auto;}
+.pg-5 .flow > .li-3.gray:before{background-image:url(../img/2_3_h.png);background-size:100% auto;}
+.pg-5 .flow > .li-5.gray:before{background-image:url(../img/2_5_h.png);background-size:100% auto;}
+
+.pg-5 .flow > .li-1{top:0px;left:0px;}
+.pg-5 .flow > .li-2{top:355px;left:0px;}
+.pg-5 .flow > .li-3{top:448px;left:307px;}
+.pg-5 .flow > .li-4{top:455px;left:552px;}
+.pg-5 .flow > .li-5{top:445px;left:780px;}
+.pg-5 .flow > .li-6{top:-70px;left:1145px;}
+
+.pg-6 .arrow{margin-top:50px;}
+
+.pg-6{background:url(../img/pg_6.jpg) no-repeat right top;background-size:300px auto;}
+.pg-6 .flow-3{top:-370px;}
+.pg-6 .flow > .li-1.gray:before{background-image:url(../img/3_1_h.png);background-size:100% auto;}
+.pg-6 .flow > .li-3.gray:before{background-image:url(../img/3_3_h.png);background-size:100% auto;}
+.pg-6 .flow > .li-4.gray:before{background-image:url(../img/3_4_h.png);background-size:100% auto;}
+
+.pg-6 .flow > .li-1{top:0px;left:0px;}
+.pg-6 .flow > .li-2{top:330px;left:0px;}
+.pg-6 .flow > .li-3{top:384px;left:310px;}
+.pg-6 .flow > .li-4{top:140px;left:1134px;}
 
 
-/* ============================================================
-	 素材
-	 ============================================================ */
-/**
-  * @name       : mod-btn
-  * @explain    : 按钮
-  * @type       : 基类
-  * @author     : larrywang
-  * @version    : 1.0
-  * @html       :
-  <a class="mod-btn mod-btn-white-34 @tenpay_v3.homepage.balance.withdraw@" href="https://www.tenpay.com/app/v1.0/show_drawing_v3.cgi"><span>提 现</span></a>
-*/
+.pg-7 .arrow{margin-top:80px;}
+.pg-7 .flow > .li-1.gray:before{background-image:url(../img/4_1_h.png);background-size:100% auto;}
+.pg-7 .flow > .li-2.gray:before{background-image:url(../img/4_2_h.png);background-size:100% auto;}
+.pg-7 .flow > .li-3.gray:before{background-image:url(../img/4_3_h.png);background-size:100% auto;}
 
+.pg-7 .flow-4{top:-340px;}
+.pg-7 .flow > .li-1{top:0px;left:0px;}
+.pg-7 .flow > .li-2{top:358px;left:310px;}
+.pg-7 .flow > .li-3{top:110px;left:854px;}
 
-.mod-btn{display:inline-block;_display:inline;*display:inline;zoom:1;padding-left:2px;}
-
-.mod-btn-white-24,.mod-btn-white-24 span,
-.mod-btn-white-24:hover,.mod-btn-white-24:hover span,
-.mod-btn-blue-34,.mod-btn-blue-34 span,
-.mod-btn-blue-34:hover,.mod-btn-blue-34:hover span,
-.mod-btn-white-34,.mod-btn-white-34 span,
-.mod-btn-white-34:hover,.mod-btn-white-34:hover span,
-.mod-btn-white-42,.mod-btn-white-42 span,
-.mod-btn-white-42:hover,.mod-btn-white-42:hover span,
-.mod-btn-blue-42,.mod-btn-blue-42 span,
-.mod-btn-blue-42:hover,.mod-btn-blue-42:hover span,
-.mod-btn-gray-42,.mod-btn-gray-42 span,
-.mod-btn-gray-42:hover,.mod-btn-gray-42:hover span,
-.mod-btn-dashed{background-image:url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/tenpay.png?v=20151127);background-repeat:no-repeat;cursor:pointer;}
-
-.mod-btn-dashed{width:148px;padding-left:0;height:42px;line-height:42px;text-align:center;background-position:-362px -445px;}
-
-.mod-btn-white-24 {background-position: -110px -10px;}
-.mod-btn-white-24 span {background-position: right -10px;}
-.mod-btn-white-24:hover{background-position: -110px -130px;}
-.mod-btn-white-24:hover span{background-position: right -130px;}
-
-.mod-btn-white-34{background-position: -10px -170px;}
-.mod-btn-white-34 span {background-position: right -170px;}
-.mod-btn-white-34:hover{background-position: -10px -210px;}
-.mod-btn-white-34:hover span{background-position: right -210px;}
-
-.mod-btn-white-42{background-position: -10px -250px;}
-.mod-btn-white-42 span{background-position: right -250px;}
-.mod-btn-white-42:hover{background-position: -10px -299px;}
-.mod-btn-white-42:hover span{background-position: right -299px;}
-
-.mod-btn-blue-34 {background-position: -10px -50px;}
-.mod-btn-blue-34 span {background-position: right -50px;}
-.mod-btn-blue-34:hover{background-position: -10px -90px;}
-.mod-btn-blue-34:hover span{background-position: right -90px;}
-
-.mod-btn-blue-42{background-position: -10px -348px;}
-.mod-btn-blue-42 span{background-position: right -348px;}
-.mod-btn-blue-42:hover{background-position: -10px -397px;}
-.mod-btn-blue-42:hover span{background-position: right -397px;}
-
-.mod-btn-gray-42{background-position: -10px -492px;}
-.mod-btn-gray-42 span{background-position: right -492px;}
-.mod-btn-gray-42:hover{background-position: -10px -541px;}
-.mod-btn-gray-42:hover span{background-position: right -541px;}
-
-.mod-btn-white-24:hover,.mod-btn-white-24:hover span,.mod-btn-white-24,.mod-btn-white-24 span{height:24px;line-height:24px;font-size:12px;}
-.mod-btn-blue-34,.mod-btn-blue-34 span,.mod-btn-white-34,.mod-btn-white-34 span{height:34px;line-height:34px;font-size:14px;}
-.mod-btn-white-24:hover,.mod-btn-white-24:hover span,.mod-btn-blue-34,.mod-btn-blue-34 span{color:#f8f8f8;}
-.mod-btn-white-24,.mod-btn-white-24 span,.mod-btn-white-34,.mod-btn-white-34 span{color:#7b808c;}
-.mod-btn-white-24 span,.mod-btn-white-24:hover span{display:inline-block;_display:inline;*display:inline;zoom:1;padding:0 14px 0 12px;}
-.mod-btn-white-34 span,.mod-btn-blue-34 span,.mod-btn-white-34:hover span,.mod-btn-blue-34:hover span{display:inline-block;_display:inline;*display:inline;zoom:1;padding:0 38px 0 36px;}
-.mod-btn-white-42:hover span,.mod-btn-white-42 span{display:inline-block;_display:inline;*display:inline;zoom:1;padding:0 38px 0 36px;}
-.mod-btn-white-42:hover,.mod-btn-white-42{height:42px;line-height:42px;font-size:16px;color:#7b808c;}
-.mod-btn-blue-42:hover span,.mod-btn-blue-42 span{display:inline-block;_display:inline;*display:inline;zoom:1;padding:0 27px 0 25px;}
-.mod-btn-blue-42:hover,.mod-btn-blue-42{height:42px;line-height:42px;font-size:16px;color:#fff;}
-.mod-btn-gray-42:hover span,.mod-btn-gray-42 span{display:inline-block;_display:inline;*display:inline;zoom:1;padding:0 27px 0 25px;}
-.mod-btn-gray-42:hover,.mod-btn-gray-42{height:42px;line-height:42px;font-size:16px;color:#fff;}
-
-/* icon 18×18 */
-.ico-green-ok,.ico-white-info,.ico-red-warn,.ico-blue-question,.ico-red-info,.ico-white-minus,.ico-white-plus,.ico-blue-info{_display:inline; display:inline-block;*display:inline;zoom:1;width:18px;height:18px;background-image:url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/ico_18_png24.png?v=20150916);_background-image:url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/ico_18_png8.png?v=20150916);background-repeat:no-repeat;}
-.ico-green-ok{background-position:0 0;}
-.ico-white-info{background-position:-20px 0;}
-.ico-red-warn{background-position:-40px 0;}
-.ico-blue-question{background-position:-60px 0;}
-.ico-red-info{background-position:-80px 0;}
-.ico-white-minus{background-position:-100px 0;}
-.ico-white-plus{background-position:-120px 0;}
-.ico-blue-info{background-position:-140px 0;}
-
-/* icon 40×40 */
-.ico-green-ok-40,.ico-white-info-40,.ico-red-warn-40,.ico-blue-question-40,.ico-red-info-40,.ico-blue-info-40{_display:inline; display:inline-block;*display:inline;zoom:1;width:40px;height:40px;background-image:url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/ico_40_png24.png?v=20150916);_background-image:url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/ico_40_png8.png?v=20150916);background-repeat:no-repeat;}
-.ico-green-ok-40{background-position:0 0;}
-.ico-white-info-40,.ico-blue-info-40{background-position:-42px 0;}
-.ico-red-warn-40{background-position:-84px 0;}
-.ico-blue-question-40{background-position:-126px 0;}
-.ico-red-info-40{background-position:-168px 0;}
-
-/**
-  * @name      : form
-  * @explain   : 表单
-  * @type      : 基类
-  * @dependent : 无
-  * @author    : larrywang
-  * @version   : 2.0
-  * @html      :
-    html片段一：label,文本框，错误tips提示
-	<div class="form-line pay-money">
-		<label class="label" for="">转账金额：</label>
-
-		<div class="element">
-			<div class="show-text-tips">
-				<label class="label-text-tips" for="fee">财付通余额<span>100</span>元</label>
-				<input type="text" name="fee" tabindex="2" class="text ime-disabled" autocomplete="off" maxlength="14"/>元<br/>
-			</div>
-			<div class="form-tips clearfix">
-				<div class="cnt-txt">您当前的免费转账额度剩余2000.00元</div>
-			</div>
-			<div class="form-tips clearfix">
-				<span class="ico-red-warn"><!-- 图标 --></span>
-				<div class="cnt-txt red">财付通余额不足（<span>100.00</span>元），请先&nbsp;<a href="https://www.tenpay.com/v3/account/charge/ydt.shtml" target="_blank">充值</a></div>
-			</div>
-		</div>
-	</div>
-
-	html片段二：checkbox-ctrl（复选框）
-	<div class="form-line notice-message">
-		<div class="element">
-			<div class="clearfix">
-				<!-- 复选框选中态：添加checked-checkbox-ctrl类表示是被选中的，取消选中，删除checked-checkbox-ctrl类即可；disabled类表示是否可以点击-->
-				<label for="mobile_check" class="cnt-txt element-msg checkbox-ctrl checked-checkbox-ctrl">
-					<span class="ctrl-img"><input type="radio" tabindex="5" name="" class="hide"></span>
-					<span>短信通知收款方<span>（免费）</span></span>
-				</label>
-			</div>
-		</div>
-	</div>
-
-	html片段三：select，form-line-tips（行内tips）
-	<div class="form-line pay-time">
-		<label class="label" for="pay_memo">到账时间：</label>
-		<div class="element">
-			<div class="select-ctrl" style="width: 139px;">
-				<span href="#" class="select-item-label">
-					<span class="select-txt">2小时内到账</span>
-					<span class="select-ico-triangle"></span>
-				</span>
-				<ul class="select-tab-list" style="display: none;">
-					<!-- hover态加hover类-->
-					<li><span class="select-txt">实时到账</span></li>
-					<li class="hover"><span class="select-txt">1-2天到账</span></li>
-				</ul>
-			</div>
-			<div class="form-line-tips">
-				<div class="cnt-txt">2.00元手续费</div>
-			</div>
-			<div class="form-line-tips pt-no-ico i-hide"><div class="cnt-txt">无手续费</div></div>
-		</div>
-	</div>
-
-	html片段四：linkman-ctrl（联系人复选框）
-	<div class="form-line opposite-account">
-	<label class="label" for="">收款人：</label>
-
-	<div class="element relative">
-		<div class="show-text-tips">
-			<label class="label-text-tips" for="">持卡人真实姓名</label>
-			<input type="text" name="accept_uin" tabindex="1" class="text" autocomplete="off" maxlength="12"/>
-			<!-- 加上current，表示展开时的状态。-->
-			<a href="#" class="linkman-ctrl"><span class="linkman-ico-person"><!-- 联系人图标 --></span></a>
-		</div>
-	</div>
-</div>
-
-
-  */
-.mod-form .radio-ctrl .ctrl-img, .mod-form .checkbox-ctrl .ctrl-img,
-.mod-form .select-ctrl .select-item-label .select-ico-triangle,
-.mod-form .linkman-ctrl .linkman-ico-person
-{background-image: url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/form_24.png?v=20151125);_background-image: url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/form_8.png?v=20151125);background-repeat: no-repeat;}
-
-.mod-form {font-size:14px;}
-.mod-form:after{content:".";clear:both;display:block;height:0;visibility:hidden;}
-.mod-form{width:100%;padding-top:1px;}
-.mod-form legend{display:none;width:100%;padding:0 0 20px;*margin:0 -7px;font-weight:700;}  /* 默认不显示 */
-.mod-form legend span{display:block;padding:0 0 4px;border-bottom:1px solid #999;}
-
-.mod-form .text, .mod-form .pwdctrl-wrap, .mod-form textarea.shadow-bg{background:url(https://img.tenpay.com/v3/res/tenpay_v3/img/global/form_text_shadow.png?v=20151030) no-repeat;}
-.mod-form .text, .mod-form .pwdctrl-wrap, .mod-form textarea{border:1px solid #ced1d9;background-color:#f8f8f8;border-radius: 2px;}
-.mod-form .text{height:40px;line-height:40px;width:289px;padding:1px 16px 1px 16px;}
-.mod-form .text:focus, .mod-form textarea:focus{border:1px solid #1FC8F9;outline:none;}
-.mod-form .ime-disabled{ime-mode:disabled;}  /* 屏蔽输入法 */
-.mod-form textarea{padding:1px;}
-
-.mod-form .form-line:after, .mod-form .form-guide:after, .mod-form .form-line-btn:after, .mod-form .form-error:after{content:".";clear:both;display:block;height:0;visibility:hidden;}
-.mod-form .form-line, .mod-form .form-guide, .mod-form .form-line-btn, .mod-form .form-error{zoom:1;}
-.mod-form .form-line-btn{height:47px;padding-top:30px;}
-.mod-form .label{float:left;width:26%;padding-top:1px\9;_padding-top:0;line-height:44px;text-align:left;}
-.mod-form .element{float:right;min-height:22px;_height:22px;width:74%;padding-bottom:30px;position: relative;}
-.mod-form .form-text-intro{font-size:12px;color:#999;}
-.mod-form .text, .mod-form select{margin-right:6px;}
-.mod-form .text{*margin-top:-1px;}
-.mod-form .label-text-tips{display:none;width:302px;height:40px;line-height:42px\9 !important;*line-height:48px !important;margin-bottom:-40px;*margin-bottom:-38px;overflow:hidden;padding:0 2px 0 17px;color:#bec1c7;cursor:text;overflow:hidden;}
-.mod-form .label-text-tips:not(tid){line-height:43px;}
-.mod-form .label-text-tips{_position:absolute;}  /* 解决ie6报错提示时的渲染bug */
-.mod-form .element .gray, .mod-form .element .text-tips{font-size:14px;color:#999;}
-.mod-form textarea{height:100px;width:300px;line-height:1.5;*margin-top:-1px;font-size:14px;}
-.mod-form a{_display:inline-block;vertical-align:middle;}
-.mod-form .form-line-btn .ico-loading-16, .mod-form .loading .form-btn{position:absolute;top:-9999px;}
-.mod-form .loading .ico-loading-16{position:static;}
-.mod-form .form-btn {margin-right:16px;}
-.mod-form .show-text-tips .label-text-tips{display:block;}
-.mod-form .focus-text-tips .label-text-tips{display:block;color:#CCCCCC;}
-.mod-form .show-text-tips .text, .mod-form .show-text-tips textarea, .mod-form .focus-text-tips .text, .mod-form .focus-text-tips textarea{background-color:transparent;position: relative;}     /*解决ie6问题*/
-
-.mod-form .form-error {color:#e20000;padding-top:9px;padding-left:28px;line-height:18px;line-height:18px\9;*line-height:18px;float: left;}
-.mod-form .form-error .ico-red-warn,.mod-form .form-error .ico-red-warn,.mod-form .form-error .ico-red-info{float:left;margin-left:-28px;vertical-align: middle;}
-.mod-form .form-error a{vertical-align:0;}
-.mod-form .form-error-label{vertical-align:baseline;}
-
-.mod-form .form-tips { float:left; padding-top: 6px;}
-.mod-form .form-line-tips {margin-top: 12px;}
-.mod-form .form-tips .cnt-txt {width:295px;white-space: nowrap;overflow: hidden;}
-.mod-form .form-tips .cnt-txt, .mod-form .form-line-tips .cnt-txt {float: left;line-height: 150%;color: #7b808c;}
-.mod-form .form-tips .cnt-txt a, .mod-form .form-line-tips .cnt-txt a {vertical-align: baseline;}
-.mod-form .form-tips .ico-red-warn,.mod-form .form-line-tips .ico-red-warn {margin-top: 2px;margin-right:10px;float: left;}
-
-.mod-form .pwdctrl-wrap{display:inline-block;height:20px;width:187px;overflow:hidden;vertical-align:middle;font-size:0;line-height:0;margin-right:16px;}  /* 密码控件容器 : <span class="pwdctrl-wrap"><!-- 密码控件容器 --></span> */
-.mod-form .pwdctrl-wrap object, .mod-form .pwdctrl-wrap embed{height:100%;width:100%;vertical-align:top;*vertical-align:middle;}
-.mod-form .pwdctrl-wrap .btn-install-pwdctrl{display:inline-block;width:148px;height:20px;line-height:20px;background-color:#E6EFF6;cursor:pointer;font-size:12px;text-align:center;vertical-align:middle;}  /* 安装密码控件 : <span class="pwdctrl-wrap"><!-- 密码控件容器 --><a class="btn-install-pwdctrl">请点此输入密码</a></div> */
-
-.mod-form .linkman-ctrl {position:relative;display:inline-block;_display:inline;*display:inline;zoom:1;width:66px;height:42px;*height:41px;margin-left: -79px;border-left: 1px solid #ced1d9;z-index: 399;background-color: #f8f8f8;}
-.mod-form .linkman-ctrl .linkman-ico-person{display:inline-block;_display:inline;*display:inline;zoom:1;width:38px;height:23px;background-position: -10px -50px;margin: 8px 0 0 14px;cursor: pointer;}
-.mod-form .linkman-ctrl.current .linkman-ico-person {background-position: -50px -50px;}
-
-.mod-form .radio-ctrl, .mod-form .checkbox-ctrl{margin-right:8px;cursor:pointer;vertical-align:0;background-position:0 0;background-color: #f8f8f8;} /*  单选框、复选框  <label for="" class="radio-ctrl checked-radio-ctrl"><span class="ctrl-img"><input type="radio" name="" id="" class="hide" /></span><span class="ctrl-txt">借记卡</span></label>  */
-.mod-form .radio-ctrl .ctrl-img, .mod-form .checkbox-ctrl .ctrl-img{width:18px;height:18px;display:inline-block;*display:inline;*zoom:1;vertical-align:-4px;margin-right:5px;}
-.mod-form .checkbox-ctrl .ctrl-img{background-position:-10px -10px;}
-.mod-form .radio-ctrl .ctrl-img{background-position:-90px -10px;}
-.mod-form .checked-checkbox-ctrl .ctrl-img{background-position:-50px -10px;}
-.mod-form .checkbox-ctrl.disabled .ctrl-img{background-position:-90px -50px;cursor:default;}
-.mod-form .checked-checkbox-ctrl.disabled .ctrl-img{background-position:-130px -50px;}
-.mod-form .checked-radio-ctrl .ctrl-img{background-position:-130px -10px;}
-
-.mod-form .radio-ctrl.gray {cursor: not-allowed;}
-
-.mod-form .select-ctrl {position:relative;float: left;height: 44px;z-index: 2;}
-.mod-form .select-ctrl:focus {outline: none;}
-.mod-form .select-ctrl .select-item-label,.mod-form .select-ctrl .select-tab-list li {display:block;height:42px;line-height:42px;width: 100%;cursor: pointer;}
-.mod-form .select-ctrl .select-item-label,.mod-form .select-ctrl .select-tab-list{border:1px solid #ced1d9;background-color: #f8f8f8;}
-.mod-form .select-ctrl .select-tab-list{margin-top: -1px;width: 100%;_position:absolute;display: none;}
-.mod-form .select-ctrl .select-tab-list li {background-color: #f8f8f8;}
-.mod-form .select-ctrl .select-tab-list li.current {background-color: #dbdddf;}
-.mod-form .select-ctrl .select-tab-list li.hover {background-color: #f3f3f3;}
-.mod-form .select-ctrl .select-tab-list li.disabled,.mod-form .select-ctrl .select-tab-list li.disabled .select-txt {color: #bec1c7;cursor: default;}
-.mod-form .select-ctrl .select-txt {margin-left: 18px;float: left;color:#7b808c;cursor: pointer;}
-.mod-form .select-ctrl .select-item-label .select-ico-triangle {display:inline-block;_display:inline;*display:inline;zoom:1;width:10px;height:6px;background-position: -170px -10px;float: right;margin: 18px 22px 0 0;}
-.mod-form .select-ctrl.unfold .select-tab-list{display: block;}
-.mod-form .select-ctrl.unfold .select-item-label .select-ico-triangle{background-position: -210px -10px;}
-
-/*重置form表单里button*/
-.mod-form .mod-btn-blue-42:hover span, .mod-form .mod-btn-blue-42 span, .mod-form .mod-btn-gray-42:hover span, .mod-form .mod-btn-gray-42 span {padding: 0 42px 0 40px;}
-
-
-
-/**
-  * @name      : linkman
-  * @explain   : 联系人
-  * @type      : 基类
-  * @dependent : 无
-  * @author    : larrywang
-  * @version   : 1.0
-  * @html      :
-	<div class="mod-linkman">
-		<!-- 此处加class "loading"即能显示loading图标 -->
-		<div class="linkman-main">
-			<span class="ico-loading-16 hide">加载中，请稍候...</span>
-			<!-- 加上open或close，来控制联系人是否展开-->
-			<div class="linkman-block open">
-				<div class="linkman-title">
-					<div class="linkman-ico"></div>
-					<div class="linkman-txt">常用联系人(<span>2</span>)</div>
-				</div>
-				<div class="linkman-list clearfix">
-					<ul>
-						<li class="linkman-item">
-							<div class="linkman-name">张博文张博文张博文</div>
-							<div class="linkman-qq">larrywangsun@qq.com</div>
-							<i class="linkman-del"></i>
-						</li>
-						<li class="linkman-item hover">
-							<div class="linkman-name">黎翠霞</div>
-							<div class="linkman-qq">63839257</div>
-							<i class="linkman-del"></i>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<!-- 加上open或close，来控制联系人是否展开-->
-			<div class="linkman-block close">
-				<div class="linkman-title">
-					<div class="linkman-ico"></div>
-					<div class="linkman-txt">QQ好友(<span>302</span>)</div>
-				</div>
-				<div class="linkman-list clearfix">
-					<ul>
-						<li class="linkman-item">
-							<div class="linkman-name">张博文</div>
-							<div class="linkman-qq">7661157</div>
-						</li>
-						<li class="linkman-item">
-							<div class="linkman-name">黎翠霞</div>
-							<div class="linkman-qq">63839257</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-  */
-.mod-linkman .linkman-block.open .linkman-ico,
-.mod-linkman .linkman-block.close .linkman-ico,
-.mod-linkman .linkman-block .linkman-list .linkman-del
-{background-image: url('https://www.tenpay.com/v3/res/tenpay_v3/img/global/linkman_24.png?v=20151126');_background-image: url('https://www.tenpay.com/v3/res/tenpay_v3/img/global/linkman_8.png?v=20151126');background-repeat: no-repeat;}
-
-.mod-linkman {position: absolute;z-index: 199;background-color: #f8f8f8;}
-.mod-linkman .linkman-main {width: 321px;border:1px solid #ced1d9;}
-.mod-linkman .loading .ico-loading-16{width:120px;margin:20px auto;display:block;}
-.mod-linkman .linkman-block .linkman-title {height: 50px;color:#3a3d42;background-color: #f3f3f3;line-height: 50px;padding-left: 20px;}
-/* 公共属性（银行、QQ好友）：ico,txt [[*/
-.mod-linkman .linkman-block .linkman-ico {width: 19px;height: 19px;float: left;cursor: pointer;margin: 16px 10px 0 0;}
-.mod-linkman .linkman-block .linkman-txt {float: left;width:13em;white-space:nowrap;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;cursor:normal;}
-.mod-linkman .linkman-block .linkman-item {height: 50px;line-height: 50px;cursor: pointer;}
-.mod-linkman .linkman-block .linkman-item.hover {background-color: #dbdddf;}
-.mod-linkman .linkman-block .linkman-list{color: #7b808c;max-height: 250px;_height: expression(this.scrollHeight>250?'250px':'auto'); ;overflow-y: auto;overflow-x: hidden;}
-.mod-linkman .linkman-block .linkman-list .linkman-item {padding-left: 20px;}
-.mod-linkman .linkman-block .linkman-list .linkman-del {display:none;width: 15px;height: 13px;background-position: -71px -11px;cursor: pointer;float: right;margin-top: 20px;margin-right: 20px;vertical-align: top;}
-.mod-linkman .linkman-block .linkman-list .linkman-item.hover .linkman-del {display:inline-block;_display:inline;*display:inline;zoom:1;}
-.mod-linkman .linkman-block.open .linkman-ico {background-position: -40px -10px;}
-.mod-linkman .linkman-block.close .linkman-ico {background-position: -10px -10px;}
-.mod-linkman .linkman-block.close .linkman-list,.mod-linkman .linkman-block.close .linkman-group-list {display: none;}
-/* 公共属性（银行、QQ好友）：ico,txt ]]*/
-
-/* QQ好友属性（常用联系人、我的好友公共属性） [[*/
-.mod-linkman .linkman-block .linkman-name {float: left;width: 6em;margin-right:20px;white-space: nowrap;overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;float: left;}
-.mod-linkman .linkman-block .linkman-qq {float: left;width: 107px;white-space: nowrap;overflow: hidden;float: left;}
-/* QQ好友属性（常用联系人、我的好友公共属性） ]]*/
-
-/* QQ好友属性（常用联系人属性） [[*/
-.mod-linkman .linkman-block .linkman-list .linkman-item .linkman-name {padding-left:28px;}
-/* QQ好友属性（常用联系人属性） ]]*/
-
-/* QQ好友属性（我的好友属性） [[*/
-.mod-linkman .linkman-block .linkman-group-list {color: #7b808c;max-height: 250px;overflow-y: auto;overflow-x: hidden;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group .linkman-group-title {height:50px;line-height: 50px;padding-left: 48px;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group .linkman-group-body .linkman-item {padding-left: 76px;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group-line-split {margin:0 20px 0 48px;border-bottom:1px solid #ced1d9;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group.open .linkman-ico {background-position: -40px -10px;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group.close .linkman-ico {background-position: -10px -10px;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group.close .linkman-group-body {display: none;}
-.mod-linkman .linkman-block .linkman-group-list .linkman-group.close .linkman-group-line-split {display: none;}
-/* QQ好友属性（我的好友属性） ]]*/
-
-/* 银行属性 [[*/
-.mod-linkman .linkman-block .linkman-list .linkman-bank-ico {float: left;margin-top: 16px;*position: static;}
-.mod-linkman .linkman-block .linkman-list .linkman-bank-name {float: left;margin-left:8px;max-width:115px;_width:115px;white-space: nowrap;overflow: hidden;}
-.mod-linkman .linkman-block .linkman-list .linkman-split{display:inline-block;_display:inline;*display:inline;zoom:1;width:1px;height:13px;background-color:#7b808c;margin-top:19px;margin-left:10px;float: left;overflow: hidden;}
-.mod-linkman .linkman-block .linkman-list .linkman-user-name {float: left;margin-left:10px;max-width:72px;_width:72px;white-space: nowrap;overflow: hidden;}
-/* 银行属性 ]]*/
-
-
-/**
-  * @name      : area
-  * @explain   : 联系人
-  * @type      : 基类
-  * @dependent : 无
-  * @author    : larrywang
-  * @version   : 1.0
-  * @html      :
-	<div class="mod-area clearfix">
-		<div class="area-title clearfix">
-			<div class="area-title-txt">请选择直辖市或省份</div>
-			<div class="area-ico-close"></div>
-		</div>
-		<div class="area-list">
-			<ul>
-				<li>北京</li>
-				<li>上海</li>
-				<li>天津</li>
-				<li class="hover">重庆</li>
-				<li>河北</li>
-				<li>山西</li>
-				<li>新疆</li>
-			</ul>
-		</div>
-	</div>
-  */
-.mod-area .area-title .area-ico-close
-{background-image: url('https://www.tenpay.com/v3/res/tenpay_v3/img/global/area_24.png?v=20151126');_background-image: url('https://www.tenpay.com/v3/res/tenpay_v3/img/global/area_8.png?v=20151126');background-repeat: no-repeat;}
-
-.mod-area {width: 321px;border: 1px solid #ced1d9; background-color: #f8f8f8;}
-.mod-area .area-title {border-bottom: 1px dotted #ced1d9;}
-.mod-area .area-title .area-title-txt {width: 286px;line-height: 40px;float: left;text-align: center;color: #7b808c;}
-.mod-area .area-title .area-ico-close {display:inline-block;_display:inline;*display:inline;zoom:1;width: 15px;height: 13px;background-position: -9px -9px;cursor: pointer;float: right;margin-top: 14px;margin-right: 19px;vertical-align: top;}
-.mod-area .area-list {padding: 5px 15px;}
-.mod-area .area-list li {width: 62px;height: 24px;float: left; text-align: center;margin: 0 5px 3px;cursor: pointer;border-radius: 2px;}
-.mod-area .area-list li.hover {background-color: #f3f3f3;}

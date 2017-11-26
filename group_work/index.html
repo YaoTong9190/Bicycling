@@ -7,71 +7,172 @@
 <meta name="page"/>
 <title>Bicycle - Make Life Simple</title>
 <link href="css/tenpay_min.css?v=20160825" rel="stylesheet" type="text/css">
-
-	   <script type="text/javascript" src="js/echarts-all-3.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="css/examples.css" />
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+       <script type="text/javascript" src="js/echarts-all-3.js"></script>
 	   <script type="text/javascript" src="js/ecStat.min.js"></script>
 	   <script type="text/javascript" src="js/dataTool.min.js"></script>
 	   <script type="text/javascript" src="js/china.js"></script>
 	   <script type="text/javascript" src="js/world.js"></script>
 	   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
 	   <script type="text/javascript" src="js/bmap.min.js"></script>
+       <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+        
+        <script type="text/javascript" src="js/scrolloverflow.js"></script>
 
-	   <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+        <script type="text/javascript" src="js/examples.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    css3: true
+                });
+            });
+        </script>
 <script type="text/javascript">
 $(function(){
-$( "#clickme" ).click(function() {
-  $( "#book" ).toggle( "slow", function() {
-	// Animation complete.
-  });
-});
-	$('li').click(function(){
-		$(this).toggleClass('gray');
-	})
+
+    $('li').addClass('gray');
+    $('.pg .li-1').removeClass('gray');
+    $('.pg-5 li').click(function(){
+        $('.pg-5 li').addClass('gray');
+        $(this).removeClass('gray');
+    })
+    $('.pg-6 li').click(function(){
+        $('.pg-6 li').addClass('gray');
+        $(this).removeClass('gray');
+    })
+    $('.pg-7 li').click(function(){
+        $('.pg-7 li').addClass('gray');
+        $(this).removeClass('gray');
+    })
+    $('.pg-5 .li-1').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "0px", marginTop : "0px" } );
+    })
+    $('.pg-5 .li-2').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "0px", marginTop : "330px" } );
+    })
+    $('.pg-5 .li-3').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "270px", marginTop : "420px" } );
+    })
+    $('.pg-5 .li-4').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "510px", marginTop : "420px" } );
+    })
+    $('.pg-5 .li-5').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "910px", marginTop : "420px" } );
+    })
+    $('.pg-5 .li-6').click(function(){
+        $('.pg-5 .arrow').css( { marginLeft : "1130px", marginTop : "-110px" } );
+    })
+    $('.pg-6 .li-1').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "0px", marginTop : "50px" } );
+    })
+    $('.pg-6 .li-2').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "0px", marginTop : "330px" } );
+    })
+    $('.pg-6 .li-3').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "560px", marginTop : "410px" } );
+    })
+    $('.pg-6 .li-4').click(function(){
+        $('.pg-6 .arrow').css( { marginLeft : "1110px", marginTop : "153px" } );
+    })
+    $('.pg-7 .li-1').click(function(){
+        $('.pg-7 .arrow').css( { marginLeft : "0px", marginTop : "80px" } );
+    })
+    $('.pg-7 .li-2').click(function(){
+        $('.pg-7 .arrow').css( { marginLeft : "410px", marginTop : "410px" } );
+    })
+    $('.pg-7 .li-3').click(function(){
+        $('.pg-7 .arrow').css( { marginLeft : "1110px", marginTop : "150px" } );
+    })
 });
 
 </script>
 </head>
 <body class="main">
 <!-- content [[ -->
-<div class="content" role="main">
-	<div class="pg pg-1 hide">
+<div class="content" role="main" id="fullpage">
+	<div class="pg pg-1 section hide" id="section0">
+        <canvas class="canvas"></canvas>
+
+        <div class="help">?</div> 
+
+        <div class="ui">
+          <input class="ui-input" type="text" />
+          <span class="ui-return">↵</span>
+        </div>
+
+        <div class="overlay">
+          <div class="tabs">
+            <div class="tabs-labels"><span class="tabs-label">Commands</span><span class="tabs-label">Info</span><span class="tabs-label">Share</span></div>
+
+            <div class="tabs-panels">
+              <ul class="tabs-panel commands">
+                <li class="commands-item"><span class="commands-item-title">Text</span><span class="commands-item-info" data-demo="Hello :)">Type anything</span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Countdown</span><span class="commands-item-info" data-demo="#countdown 10">#countdown<span class="commands-item-mode">number</span></span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Time</span><span class="commands-item-info" data-demo="#time">#time</span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Rectangle</span><span class="commands-item-info" data-demo="#rectangle 30x15">#rectangle<span class="commands-item-mode">width x height</span></span><span class="commands-item-action">Demo</span></li>
+                <li class="commands-item"><span class="commands-item-title">Circle</span><span class="commands-item-info" data-demo="#circle 25">#circle<span class="commands-item-mode">diameter</span></span><span class="commands-item-action">Demo</span></li>
+
+                <li class="commands-item commands-item--gap"><span class="commands-item-title">Animate</span><span class="commands-item-info" data-demo="The time is|#time|#countdown 3|#icon thumbs-up"><span class="commands-item-mode">command1</span>&nbsp;|<span class="commands-item-mode">command2</span></span><span class="commands-item-action">Demo</span></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
 	</div>
-	<div class="pg pg-2 hid">
-        <div id="container" style="height:500px;width:900px;left:254px;top:24px;"></div>
+    <div class="pg pg-2 section hide" id="section1">
+        <a href="#none" class="arrow white"></a>
+        <img src="img/pg_2.png" width="800" height="auto" alt="">
+    </div>
+    <div class="pg pg-3 section hide" id="section2">
+        <img src="img/pg_3.png" width="800" height="auto" alt="">
+    </div>
+    <div class="pg pg-4 section hide" id="section3">
+        <img src="img/pg_4.png" width="460" height="auto" alt="">
+        <a href="#none" class="arrow white"></a>
+    </div>
+    <div class="pg pg-5  section hid" id="section4">
+        <div id="container" class="con" style="height:500px;width:900px;left:254px;top:24px;"></div>
 		<ol class="flow flow-2">
-			<li class="li-1 rect"><img src="img/2_1.png" width="284" height="auto" alt=""></li>
-			<li class="li-2"><img src="img/2_2.png" width="317" height="auto" alt=""></li>
-			<li class="li-3"><img src="img/2_3.png" width="223" height="auto" alt=""></li>
-			<li class="li-4 rect"><img src="img/2_4.png" width="210" height="auto" alt=""></li>
-			<li class="li-5"><img src="img/2_5.png" width="623" height="auto" alt=""></li>
-			<li class="li-6 rect"><img src="img/2_6.png" width="260" height="auto" alt=""></li>
+			<li class="li-1 rect"><img src="gif/2_1.gif" width="284" height="auto" alt=""></li>
+			<li class="li-2"><img src="gif/2_2.gif" width="317" height="auto" alt=""></li>
+			<li class="li-3"><img src="gif/2_3.gif" width="223" height="auto" alt=""></li>
+			<li class="li-4 rect"><img src="gif/2_4.gif" width="210" height="auto" alt=""></li>
+			<li class="li-5"><img src="gif/2_5.gif" width="623" height="auto" alt=""></li>
+			<li class="li-6 rect"><img src="gif/2_6.gif" width="260" height="auto" alt=""></li>
 		</ol>
-			
+		<a href="#none" class="arrow"></a>
 	</div>
-	<div class="pg pg-3 hie">
-        <div id="container-1" style="height:500px;width:900px;left:254px;top:24px;"></div>
+	<div class="pg pg-6 section hie" id="section5">
+        <div id="container-1" class="con" style="height:500px;width:900px;left:254px;top:24px;"></div>
 		<ol class="flow flow-3">
-			<li class="li-1"><img src="img/3_1.png" width="283" height="auto" alt=""></li>
-			<li class="li-2 rect"><img src="img/3_2.png" width="283" height="auto" alt=""></li>
-			<li class="li-3"><img src="img/3_3.png" width="795" height="auto" alt=""></li>
-			<li class="li-4"><img src="img/3_4.png" width="270" height="auto" alt=""></li>
+			<li class="li-1"><img src="gif/3_1.gif" width="283" height="auto" alt=""></li>
+			<li class="li-2 rect"><img src="gif/3_2.gif" width="283" height="auto" alt=""></li>
+			<li class="li-3"><img src="gif/3_3.gif" width="795" height="auto" alt=""></li>
+			<li class="li-4"><img src="gif/3_4.gif" width="270" height="auto" alt=""></li>
 		</ol>
+        <a href="#none" class="arrow"></a>
 			
 	</div>
-	<div class="pg pg-4">
-        <div id="container-2" style="height:500px;width:900px;left:254px;top:24px;"></div>
+	<div class="pg pg-7 section" id="section6">
+        <div id="container-2" class="con" style="height:500px;width:900px;left:254px;top:24px;"></div>
         <ol class="flow flow-4">
-            <li class="li-1"><img src="img/4_1.png" width="308" height="auto" alt=""></li>
-            <li class="li-2"><img src="img/4_2.png" width="520" height="auto" alt=""></li>
-            <li class="li-3"><img src="img/4_3.png" width="553" height="auto" alt=""></li>
+            <li class="li-1"><img src="gif/4_1.gif" width="308" height="auto" alt=""></li>
+            <li class="li-2"><img src="gif/4_2.gif" width="520" height="auto" alt=""></li>
+            <li class="li-3"><img src="gif/4_3.gif" width="553" height="auto" alt=""></li>
         </ol>
+        <a href="#none" class="arrow"></a>
             
 	</div>
 </div>
 <!-- content ]] -->
 
 <script type="text/javascript">
-
+//2015 9 17
 var dom = document.getElementById("container");
 var myChart = echarts.init(dom);
 var app = {};
@@ -85,7 +186,7 @@ option = {
 		trigger: 'axis'
 	},
 	legend: {
-		data:['Straiton Path','Melville Drive Main']
+		data:['Nicolson Street','Melville Drive Main']
 	},
 	toolbox: {
 		show: true,
@@ -112,13 +213,13 @@ option = {
 	},
 	series: [
 		{
-			name:'Straiton Path',
+			name:'Nicolson Street',
 			type:'line',
-			data:[0, 1, 15, 3, 5, 2, 17,3,0],
+			data:[6,7,123,87,120,200,134,52],
 			markPoint: {
 				data: [
-					{type: 'max', name: 'Max'}/*,
-					{type: 'min', name: 'Min'}*/
+					{type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
 				]
 			}/*,
 			markLine: {
@@ -130,10 +231,11 @@ option = {
 		{
 			name:'Melville Drive Main',
 			type:'line',
-			data:[0,2, 20, 5, 4, 5, 27,4,1],
+			data:[16,3,254,206,184,344,232,64],
 			markPoint: {
 				data: [
-					{type: 'max', name: 'Max'}
+                    {type: 'max', name: 'Max'},
+                    {type: 'min', name: 'Min'}
 				]
 			}/*,
 			markLine: {
@@ -175,7 +277,7 @@ option1 = {
         trigger: 'axis'
     },
     legend: {
-        data:['Straiton Path','Melville Drive Main']
+        data:['Nicolson Street','Melville Drive Main']
     },
     toolbox: {
         show: true,
@@ -192,7 +294,7 @@ option1 = {
     xAxis:  {
         type: 'category',
         boundaryGap: false,
-        data: [' ','6:00','9:00','12:00','15:00','18:00','21:00','24:00']
+        data: ['4-5','4-6','4-7','4-8','4-9','4-10','4-11','4-12','4-13','4-14','4-15','4-16','4-17','4-18','4-19','4-20','4-21','4-22','4-23','4-24','4-25']
     },
     yAxis: {
         type: 'value',
@@ -202,9 +304,9 @@ option1 = {
     },
     series: [
         {
-            name:'Straiton Path',
+            name:'Nicolson Street',
             type:'line',
-            data:[0, 1, 15, 3, 5, 2, 17,3,0],
+            data:[326,319,643,682,652,551,302,183,498,575,533,640,573,399,338,631,736,780,709,650,352],
             markPoint: {
                 data: [
                     {type: 'max', name: 'Max'}/*,
@@ -220,7 +322,7 @@ option1 = {
         {
             name:'Melville Drive Main',
             type:'line',
-            data:[0,2, 20, 5, 4, 5, 27,4,1],
+            data:[614,848,937,1144,1173,1017,502,448,944,954,1031,1238,1019,815,599,1189,1502,1530,1554,1223,999],
             markPoint: {
                 data: [
                     {type: 'max', name: 'Max'}
@@ -263,7 +365,7 @@ option2 = {
         trigger: 'axis'
     },
     legend: {
-        data:['Straiton Path','Melville Drive Main']
+        data:['Nicolson Street','Melville Drive Main']
     },
     toolbox: {
         show: true,
@@ -290,7 +392,7 @@ option2 = {
     },
     series: [
         {
-            name:'Straiton Path',
+            name:'Nicolson Street',
             type:'line',
             data:[0, 1, 15, 3, 5, 2, 17,3,0],
             markPoint: {
@@ -350,5 +452,8 @@ if (option2 && typeof option2 === "object") {
 </script>
 <!--
 -->
+
+
+       <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
