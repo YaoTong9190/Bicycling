@@ -1,22 +1,4 @@
-/*
- **************************************************************************
- *																							*
- *	TID(Tenpay Innovation Design) Css Framework												*
- *																							*
- *	@copyright			 Copyright (c) 2015, TENPAY.COM All rights reserved.				*
- *	@link						https://www.tenpay.com/v3/									*
- *	@author					larrywang														*
- *	@Team						TID															*
- *	@version				 1.1															*
- *	@lastmodify			2015.9.13															*
- *																							*
- **************************************************************************
-*/
 
-
-/* ============================================================
-	 样式重置
-	 ============================================================ */
 body,p,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,fieldset,legend,input,select,textarea,button,th,td,blockquote,address,pre{margin:0;padding:0;}
 h1,h2,h3,h4,h5,h6,input,textarea,select,button,label{font-size:100%;vertical-align:middle;}
 ul,dl,ol{list-style:none;}
@@ -87,62 +69,7 @@ a.dark-gray:hover{color:#0078B6;}
 
 .col-l, .col-m, .col-inner-l, .col-inner-m{display:inline;float:left;width:auto;}
 .col-r, .col-inner-r{display:inline;float:right;width:auto;}
-/*
-	普通示例：
-	<div class="container">
-		<div class="col-l">middle</div>
-		<div class="col-m">left</div>
-		<div class="col-r">right</div>
-	</div>
 
-	<div class="container">
-		<div class="col-l">middle</div>
-		<div class="col-r">left</div>
-	</div>
-
-	<div class="container">
-		<div class="col-l">middle</div>
-		<div class="col-r">
-			right
-
-			<div class="col-inner-l">
-				inner left
-			</div>
-			<div class="col-inner-r">
-				inner right
-			</div>
-		</div>
-	</div>
-
-	--------------------------------------------
-
-	中间列先加载的示例：
-	结构:
-	<div class="container">
-		<div class="col-m">middle</div>
-		<div class="col-l">left</div>
-		<div class="col-r">right</div>
-	</div>
-
-	样式:
-	页面宽度全屏自适应的情况：
-	.container{width:auto;padding:0 200px 0 300px;}	/# width：全屏宽度自适应, padding-life：左列宽度, padding-right：右列宽度 #/
-	.col-m{width:100%;}	/# width:100%, 父容器宽度 #/
-	.col-l{position:relative;right:300px!important;right:-200px;width:290px;padding-right:10px;margin-left:-100%;}	/# right(!important, 非ie6):左列宽度, right(ie6)：右列宽度, width：左列宽度 - 与中列的右间距, padding-right：与中列的右间距 #/
-	.col-r{width:190px;padding-left:10px;margin-right:-200px;}	/# width：右列宽度, padding-left：与中列的左间距, margin-right：右列宽度 #/
-
-	页面宽度固定的情况：
-	.container{width:460px;padding:0 200px 0 300px;}	/# 页面宽度(960px) = width + padding-left + padding-right, width：中列宽度, padding-life：左列宽度, padding-right：右列宽度 #/
-	.col-m{width:100%;}	/# width:100%, 父容器宽度 #/
-	.col-l{width:290px;padding-right:10px;margin-left:-760px;}	/# width：左列宽度 - 与中列的右间距, padding-right：与中列的右间距, margin-left：左列宽 + 中列宽 #/
-	.col-r{width:190px;padding-left:10px;margin-right:-200px;}	/# width：右列宽度, padding-left：与中列的左间距, margin-right：右列宽度 #/
-*/
-
-/* ============================================================
-	 常用功能
-	 ============================================================ */
-
-/* 清除浮动 */
 .clearfix:after{content:".";clear:both;display:block;height:0;visibility:hidden;}
 .clearfix{zoom:1;}
 
@@ -242,17 +169,16 @@ html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    border-bottom: 15px solid rgb(45, 188, 87);
-    border-right: 15px solid rgb(45, 188, 87);
-    border-left: 15px solid rgb(255,255, 255);
-    border-top: 15px solid rgb(255,255, 255);
+    border-bottom: 15px solid rgba(45, 188, 87,0.8);
+    border-right: 15px solid rgba(45, 188, 87,0.8);
+    border-left: 15px solid rgba(255,255, 255,0);
+    border-top: 15px solid rgba(255,255, 255,0);
     position: absolute;
     top: 70px;
     left: 136px;
     -webkit-animation: opener .5s ease-in-out alternate infinite;
     animation: opener .5s ease-in-out alternate infinite;
     cursor: pointer;
-    opacity: 0.5;
     -webkit-transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
     transition: opacity .2s ease-in-out, transform .5s ease-in-out .2s;
 }
@@ -290,8 +216,10 @@ html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
     }
 }
 
+.pg .arrow.white{margin-left:-15px;}
 .pg-2 .arrow.white{left:50%;}
-.pg-4 .arrow.white{left:50%;margin-top:600px;}
+.pg-3 .arrow.white{left:50%;margin-top:590px;}
+.pg-4 .arrow.white{left:50%;margin-top:590px;}
 
 /* 
 	sally#dbf7e3;
@@ -314,24 +242,24 @@ html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
   background: -ms-linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
   background: linear-gradient(top, rgb(203, 235, 219) 0%, rgb(55, 148, 192) 120%);
 }
-.pg-2,.pg-3,.pg-4{background-color:#4cd875;}
+.pg-2,.pg-3,.pg-4{background-color:#4cd875;width:100%;}
 .pg-2 img{margin:0 auto;}
+.pg-2 img,.pg-3 img,.pg-4 img{margin-top: -30px;}
 
-
-.pg-5 {
-}
+.pg-5,.pg-6,.pg-7{width:1410px; margin:0 auto;}
+.pg-5 .arrow{margin-top:-60px;}
 .pg-5 .flow > .li-2.gray:before{background-image:url(../img/2_2_h.png);background-size:100% auto;}
 .pg-5 .flow > .li-3.gray:before{background-image:url(../img/2_3_h.png);background-size:100% auto;}
 .pg-5 .flow > .li-5.gray:before{background-image:url(../img/2_5_h.png);background-size:100% auto;}
 
-.pg-5 .flow > .li-1{top:0px;left:0px;}
+.pg-5 .flow > .li-1{top:-30px;left:0px;}
 .pg-5 .flow > .li-2{top:355px;left:0px;}
 .pg-5 .flow > .li-3{top:448px;left:307px;}
 .pg-5 .flow > .li-4{top:455px;left:552px;}
 .pg-5 .flow > .li-5{top:445px;left:780px;}
 .pg-5 .flow > .li-6{top:-70px;left:1145px;}
 
-.pg-6 .arrow{margin-top:50px;}
+.pg-6 .arrow{margin-top:-40px;}
 
 .pg-6{background:url(../img/pg_6.jpg) no-repeat right top;background-size:300px auto;}
 .pg-6 .flow-3{top:-370px;}
@@ -339,19 +267,19 @@ html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
 .pg-6 .flow > .li-3.gray:before{background-image:url(../img/3_3_h.png);background-size:100% auto;}
 .pg-6 .flow > .li-4.gray:before{background-image:url(../img/3_4_h.png);background-size:100% auto;}
 
-.pg-6 .flow > .li-1{top:0px;left:0px;}
+.pg-6 .flow > .li-1{top:-50px;left:0px;}
 .pg-6 .flow > .li-2{top:330px;left:0px;}
 .pg-6 .flow > .li-3{top:384px;left:310px;}
 .pg-6 .flow > .li-4{top:140px;left:1134px;}
 
 
-.pg-7 .arrow{margin-top:80px;}
+.pg-7 .arrow{margin-top:20px;}
 .pg-7 .flow > .li-1.gray:before{background-image:url(../img/4_1_h.png);background-size:100% auto;}
 .pg-7 .flow > .li-2.gray:before{background-image:url(../img/4_2_h.png);background-size:100% auto;}
 .pg-7 .flow > .li-3.gray:before{background-image:url(../img/4_3_h.png);background-size:100% auto;}
 
 .pg-7 .flow-4{top:-340px;}
-.pg-7 .flow > .li-1{top:0px;left:0px;}
+.pg-7 .flow > .li-1{top:-26px;left:0px;}
 .pg-7 .flow > .li-2{top:358px;left:310px;}
 .pg-7 .flow > .li-3{top:110px;left:854px;}
 
