@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('Bike Life|In Edinburgh|SALLY XUANCHEN TONG|#countdown 3||');
+      S.UI.simulate('Bike Life|In Edinburgh|#countdown 3||');
 
       //S.UI.simulate('BIKE LIFE|IN EDINBURGH|Cyclists|Bike Counters|#countdown 3||');
     }
