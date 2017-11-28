@@ -19,6 +19,15 @@
 * ipynb 
 * csv
 
+### 4. report -> our group report
+* pdf
+* doc (for edit)
+
+### 5. presentation -> our slides and other materials
+* ppt
+* jpg & psd (poster)
+* doc (everyone's speech document with comments about demo and slides presentation)
+
 
 # Project Explanation
 
