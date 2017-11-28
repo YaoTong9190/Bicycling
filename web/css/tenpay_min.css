@@ -261,7 +261,7 @@ html .highest-layer{z-index:999;} 	/* 层叠级别 ： 最高 */
 
 .pg-6 .arrow{margin-top:-40px;}
 
-.pg-6{background:url(../img/pg_6.jpg) no-repeat right top;background-size:300px auto;}
+.pg-6{background-size:300px auto;}
 .pg-6 .flow-3{top:-370px;}
 .pg-6 .flow > .li-1.gray:before{background-image:url(../img/3_1_h.png);background-size:100% auto;}
 .pg-6 .flow > .li-3.gray:before{background-image:url(../img/3_3_h.png);background-size:100% auto;}
