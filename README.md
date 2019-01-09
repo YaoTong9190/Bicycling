@@ -45,7 +45,4 @@ We try to focus on human behaviour and analyze the cycling data with other datab
 * cycling & date & time
 
 
-# Work Allocation
-* Sally Bai -> develop the website
-* Xuanchen Yao -> design the webpages
-* Tong Yao -> Report and presentation slides
+
